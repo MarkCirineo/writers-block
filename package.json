@@ -1,0 +1,31 @@
+{
+  "name": "writers-block",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarkCirineo/writers-block.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarkCirineo/writers-block/issues"
+  },
+  "homepage": "https://github.com/MarkCirineo/writers-block#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.2",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.4",
+    "express-session": "^1.17.2",
+    "moxy-ta": "^1.0.2",
+    "mysql2": "^2.3.2",
+    "sequelize": "^6.7.0"
+  }
+}
