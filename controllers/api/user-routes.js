@@ -4,7 +4,7 @@ const router = require("express").Router();
 const { User, Project } = require("../../models");
 
 // BASIC CRUD
-// GET all users, GET one user, UPDATE user, DELETE user
+// GET all users, GET one user, CREATE user, UPDATE user, DELETE user
 
 // Get a list of all users, excluding their passwords
 router.get("/", async (req, res) => {
@@ -42,7 +42,30 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-// TODO: UPDATE a user
+// CREATE new user
+router.post("/", async (req, res) => {
+    try {
+      const userData = await User.create({
+        username: req.body.username,
+        email: req.body.email,
+        password: req.body.password,
+      });
+      console.log(userData);
+      // Set up sessions with a 'loggedIn' variable set to `true`
+      req.session.save(() => {
+        req.session.user_id = userData.id;
+        req.session.username = userData.username;
+        req.session.loggedIn = true;
+  
+        res.status(200).json(userData);
+      });
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  });
+
+// UPDATE a user
 router.put("/:id", async (req, res) => {
   try {
     const userData = await User.update(req.body, {
@@ -61,7 +84,7 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-// TODO: DELETE a user
+// DELETE a user
 router.delete("/:id", async (req, res) => {
   try {
     const userData = await User.destroy({
@@ -132,29 +155,6 @@ router.post("/logout", (req, res) => {
     });
   } else {
     res.status(404).end();
-  }
-});
-
-// CREATE new user
-router.post("/", async (req, res) => {
-  try {
-    const userData = await User.create({
-      username: req.body.username,
-      email: req.body.email,
-      password: req.body.password,
-    });
-    console.log(userData);
-    // Set up sessions with a 'loggedIn' variable set to `true`
-    req.session.save(() => {
-      req.session.user_id = userData.id;
-      req.session.username = userData.username;
-      req.session.loggedIn = true;
-
-      res.status(200).json(userData);
-    });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
   }
 });
 
