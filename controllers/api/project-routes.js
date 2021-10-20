@@ -38,6 +38,19 @@ router.get("/:id", async (req, res) => {
 });
 
 //TODO: CREATE a new project
+router.post("/", async (req, res) => {
+  try {
+    const projectData = await Project.create({
+      title: req.body.title,
+      thesis: req.body.thesis,
+    });
+    res.status(200).json({
+      message: "Your project has been added to the database!",
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 //TODO: UPDATE a project
 
