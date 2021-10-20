@@ -1,7 +1,7 @@
 // Individual pages are for getting the specific data from the database
 // Full CRUD operations
 const router = require("express").Router();
-const { User, Comment, Post } = require("../../models");
+const { User, Project } = require("../../models");
 
 // Get a list of all users, excluding their passwords
 router.get("/", async (req, res) => {
@@ -15,14 +15,25 @@ router.get("/", async (req, res) => {
   }
 });
 
+// Route to find a user by ID, including all their projects
 router.get("/:id", async (req, res) => {
   try {
-    const userData = await User.findByPk(req.params.id);
+    const userData = await User.findOne({
+      where: {
+        id: req.params.id,
+      },
+      include: [
+        {
+          model: Project,
+          attributes: ["title", "thesis", "user_id"],
+        },
+      ],
+    });
     if (!userData) {
       res.status(404).json({ message: "No user with this id!" });
       return;
     }
-    res.status(200).json(userData)
+    res.status(200).json(userData);
   } catch (err) {
     res.status(500).json(err);
   }
