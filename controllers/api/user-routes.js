@@ -6,7 +6,7 @@ const { User, Project } = require("../../models");
 // BASIC CRUD
 // GET all users, GET one user, CREATE user, UPDATE user, DELETE user
 
-// Get a list of all users, excluding their passwords
+// GET a list of all users, excluding their passwords
 router.get("/", async (req, res) => {
   try {
     const userData = await User.findAll({
@@ -18,7 +18,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-// Route to find a user by ID, including all their projects
+// GET a user by ID, including all their projects
 router.get("/:id", async (req, res) => {
   try {
     const userData = await User.findOne({
@@ -44,26 +44,26 @@ router.get("/:id", async (req, res) => {
 
 // CREATE new user
 router.post("/", async (req, res) => {
-    try {
-      const userData = await User.create({
-        username: req.body.username,
-        email: req.body.email,
-        password: req.body.password,
-      });
-      console.log(userData);
-      // Set up sessions with a 'loggedIn' variable set to `true`
-      req.session.save(() => {
-        req.session.user_id = userData.id;
-        req.session.username = userData.username;
-        req.session.loggedIn = true;
-  
-        res.status(200).json(userData);
-      });
-    } catch (err) {
-      console.log(err);
-      res.status(500).json(err);
-    }
-  });
+  try {
+    const userData = await User.create({
+      username: req.body.username,
+      email: req.body.email,
+      password: req.body.password,
+    });
+    console.log(userData);
+    // Set up sessions with a 'loggedIn' variable set to `true`
+    req.session.save(() => {
+      req.session.user_id = userData.id;
+      req.session.username = userData.username;
+      req.session.loggedIn = true;
+
+      res.status(200).json(userData);
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 
 // UPDATE a user
 router.put("/:id", async (req, res) => {
@@ -105,7 +105,7 @@ router.delete("/:id", async (req, res) => {
 // User-specific functionality
 // Login, Logout, and Create New User
 
-// Login
+// LOGIN Route
 router.post("/login", async (req, res) => {
   try {
     const userData = await User.findOne({
@@ -146,7 +146,7 @@ router.post("/login", async (req, res) => {
   }
 });
 
-// Logout Route
+// LOGOUT Route
 router.post("/logout", (req, res) => {
   // When the user logs out, destroy the session
   if (req.session.loggedIn) {

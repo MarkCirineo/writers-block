@@ -7,9 +7,10 @@ const { User, Project, Topic_Sentence, Works_Cited } = require("../../models");
 
 //TODO: GET a project by ID
 
-//TODO: 
-//TODO:
-//TODO:
+//TODO: CREATE a new project
 
+//TODO: UPDATE a project
+
+//TODO: DELETE a project
 
 module.exports = router;
