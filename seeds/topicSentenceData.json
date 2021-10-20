@@ -1,0 +1,110 @@
+[
+    {
+        "sentence": "This is an example topic sentence for the first project.",
+        "project_id": 1
+    },
+    {
+        "sentence": "This is an example topic sentence for the first project.",
+        "project_id": 1
+    },
+    {
+        "sentence": "This is an example topic sentence for the first project.",
+        "project_id": 1
+    },
+    {
+        "sentence": "This is an example topic sentence for the second project.",
+        "project_id": 2
+    },
+    {
+        "sentence": "This is an example topic sentence for the second project.",
+        "project_id": 2
+    },
+    {
+        "sentence": "This is an example topic sentence for the second project.",
+        "project_id": 2
+    },
+    {
+        "sentence": "This is an example topic sentence for the third project.",
+        "project_id": 3
+    },
+    {
+        "sentence": "This is an example topic sentence for the third project.",
+        "project_id": 3
+    },
+    {
+        "sentence": "This is an example topic sentence for the third project.",
+        "project_id": 3
+    },
+    {
+        "sentence": "This is an example topic sentence for the fourth project.",
+        "project_id": 4
+    },
+    {
+        "sentence": "This is an example topic sentence for the fourth project.",
+        "project_id": 4
+    },
+    {
+        "sentence": "This is an example topic sentence for the fourth project.",
+        "project_id": 4
+    },
+    {
+        "sentence": "This is an example topic sentence for the fifth project.",
+        "project_id": 5
+    },
+    {
+        "sentence": "This is an example topic sentence for the fifth project.",
+        "project_id": 5
+    },
+    {
+        "sentence": "This is an example topic sentence for the fifth project.",
+        "project_id": 5
+    },
+    {
+        "sentence": "This is an example topic sentence for the sixth project.",
+        "project_id": 6
+    },
+    {
+        "sentence": "This is an example topic sentence for the sixth project.",
+        "project_id": 6
+    },
+    {
+        "sentence": "This is an example topic sentence for the sixth project.",
+        "project_id": 6
+    },
+    {
+        "sentence": "This is an example topic sentence for the seventh project.",
+        "project_id": 7
+    },
+    {
+        "sentence": "This is an example topic sentence for the seventh project.",
+        "project_id": 7
+    },
+    {
+        "sentence": "This is an example topic sentence for the seventh project.",
+        "project_id": 7
+    },
+    {
+        "sentence": "This is an example topic sentence for the eighth project.",
+        "project_id": 8
+    },
+    {
+        "sentence": "This is an example topic sentence for the eighth project.",
+        "project_id": 8
+    },
+    {
+        "sentence": "This is an example topic sentence for the eighth project.",
+        "project_id": 8
+    },
+    {
+        "sentence": "This is an example topic sentence for the ninth project.",
+        "project_id": 9
+    },
+    {
+        "sentence": "This is an example topic sentence for the ninth project.",
+        "project_id": 9
+    },
+    {
+        "sentence": "This is an example topic sentence for the ninth project.",
+        "project_id": 9
+    }
+]

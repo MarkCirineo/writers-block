@@ -1,0 +1,47 @@
+[
+    {
+        "title": "This is the first project",
+        "thesis": "This is an example thesis statement for the first project.",
+        "user_id": 1
+    },
+    {
+        "title": "This is the second project",
+        "thesis": "This is an example thesis statement for the second project.",
+        "user_id": 2
+    },
+    {
+        "title": "This is the third project",
+        "thesis": "This is an example thesis statement for the third project.",
+        "user_id": 2
+    },
+    {
+        "title": "This is the fourth project",
+        "thesis": "This is an example thesis statement for the fourth project.",
+        "user_id": 3
+    },
+    {
+        "title": "This is the fifth project",
+        "thesis": "This is an example thesis statement for the fifth project.",
+        "user_id": 3
+    },
+    {
+        "title": "This is the sixth project",
+        "thesis": "This is an example thesis statement for the sixth project.",
+        "user_id": 3
+    },
+    {
+        "title": "This is the seventh project",
+        "thesis": "This is an example thesis statement for the seventh project.",
+        "user_id": 3
+    },
+    {
+        "title": "This is the eight project",
+        "thesis": "This is an example thesis statement for the eighth project.",
+        "user_id": 3
+    },
+    {
+        "title": "This is the ninth project",
+        "thesis": "This is an example thesis statement for the ninth project.",
+        "user_id": 3
+    }
+]
