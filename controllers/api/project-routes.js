@@ -48,7 +48,7 @@ router.post("/", async (req, res) => {
       title: req.body.title,
       thesis: req.body.thesis,
     });
-    res.status(200).json({
+    res.status(200).json(projectData, {
       message: "Your project has been added to the database!",
     });
   } catch (err) {
@@ -57,6 +57,17 @@ router.post("/", async (req, res) => {
 });
 
 //TODO: UPDATE a project
+router.put("/:id", async (req, res) => {
+  try {
+    const projectData = await Project.update(req.body);
+    if (!projectData) {
+      res.status(404).json({ message: "No project with this ID" });
+    }
+    res.status(200).json({ message: "This project has been updated!" });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 //TODO: DELETE a project
 router.delete("/:id", async (req, res) => {
