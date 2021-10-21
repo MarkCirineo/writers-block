@@ -106,18 +106,14 @@ router.delete("/:id", async (req, res) => {
 // Login, Logout, and Create New User
 
 // LOGIN Route
-router.post("/login", async (req, res) => {
+router.post('/login', async (req, res) => {
   try {
-    const userData = await User.findOne({
-      where: {
-        email: req.body.email,
-      },
-    });
+    const userData = await User.findOne({ where: { email: req.body.email } });
 
     if (!userData) {
       res
         .status(400)
-        .json({ message: "Incorrect email or password. Please try again!" });
+        .json({ message: 'Incorrect email or password, please try again' });
       return;
     }
 
@@ -126,30 +122,25 @@ router.post("/login", async (req, res) => {
     if (!validPassword) {
       res
         .status(400)
-        .json({ message: "Incorrect email or password. Please try again!" });
+        .json({ message: 'Incorrect email or password, please try again' });
       return;
     }
-    console.log(req.session);
-    // Once the user successfully logs in, set up the sessions variable 'loggedIn'
+
     req.session.save(() => {
       req.session.user_id = userData.id;
-      req.session.email = userData.email;
-      req.session.loggedIn = true;
-
-      res
-        .status(200)
-        .json({ user: userData, message: "You are now logged in!" });
+      req.session.logged_in = true;
+      
+      res.json({ user: userData, message: 'You are now logged in!' });
     });
+
   } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
+    res.status(400).json(err);
   }
 });
 
 // LOGOUT Route
-router.post("/logout", (req, res) => {
-  // When the user logs out, destroy the session
-  if (req.session.loggedIn) {
+router.post('/logout', (req, res) => {
+  if (req.session.logged_in) {
     req.session.destroy(() => {
       res.status(204).end();
     });
