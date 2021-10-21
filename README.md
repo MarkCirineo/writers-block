@@ -14,53 +14,21 @@ Here is a link to the Heroku deployment: [Writers's Block Heroku Link]()
 
 ## Table of Contents
 
--- [Installation](#installation)
-
 -- [Usage](#usage)
 
 -- [License](#license)
 
--- [Contributing](#contributing)
-
--- [Tests](#tests)
-
 -- [Questions](#questions)
-
-## Installation
-
-To install necessary dependencies, run the following command:
-
-    npm i
-
-Additionally, mySQL is required as a separate install. To set up database and seed it, run the following command in your mySQL shell:
-
-    source db/schema.sql
-
-Exit the mySQL shell and enter the following command in your terminal to seed the database:
-
-    node seeds/index.js
 
 ## Usage
 
-Run the application with the following command:
+Open app by navigating to the Heroku link listed above.
 
-    node server.js
-
-and open by navigating to the Heroku link listed above.
-
-Once the server is up, the user can create an account and log in to the site. Once done, the user can begin posting. Posts can be edited and deleted by the poster and other posts from the dashboard can be commented. The user cannot begin posting without having logged in first.
+The default page is the oser being directed to login to their account. If no account exists, user can create one. Once logged in, user can create a project, add a thesis statement and topic sentences, check out the recommended sources provided by the API, and begin creating their Works Cited page. Created items can be edited or deleted should the user desire. Once saved, new projects can be created and stored.
 
 ## License
 
 This project is protected under the [MIT](https://choosealicense.com/licenses/mit/) license. (2021) (Jaraad Hines, Phil Bohn, Isaac Long, Mark Cirineo)
-
-## Contributing
-
-N/A
-
-## Tests
-
-N/A
 
 ## Questions
 
