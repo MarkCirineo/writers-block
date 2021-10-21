@@ -1,40 +1,53 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Writer's Block</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="" />
-    <script src="../../public/js/jquery.js"></script>
-  </head>
 
-  <body>
-    <header class="container-fluid" >
-      <ul class="navbar-nav nav-fill w-100">
-  <li class="nav-item">
-    <a href="#" class="nav-link">Home</a>
-  </li>
-  <li class="nav-item">
-    <a href="#" class="nav-link">Contact</a>
-  </li>
-  <li class="nav-item">
-    <a href="#" class="nav-link">About</a>
-  </li>
-</ul>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Writer's Block</title>
+  <link rel="stylesheet" href="/css/style.css" />
 
-    {{{body}}}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/css/jass.css">
 
-    {{#if loggedIn}}
-      <script src="/js/logout.js"></script>
-    {{/if}}
+  <script src="/js/jquery.js"></script>
+</head>
 
-  </body>
+<body>
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark mx-0">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Writer's Block</a>
+
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Profile</a>
+        </li>
+        < class="nav-item">
+
+          <button class="no-button" id="logout">logout</button> 
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+
+  {{{body}}}
+
+
+  <script src="/js/logout.js"></script>
+
+
+</body>
 
 </html>

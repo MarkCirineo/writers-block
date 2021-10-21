@@ -1,5 +1,6 @@
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,45 +10,58 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../public/css/style.css" />
-    
-  </head>
 
-  <body>
-  
-        <nav class="navbar navbar-expand-md bg-dark navbar-dark mx-0">
-            <!-- Brand -->
-            <a class="navbar-brand" href="#">Writer's Block</a>
-          
-            <!-- Toggler/collapsibe Button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          
-            <!-- Navbar links -->
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-              <ul class="navbar-nav">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark mx-0">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">Writer's Block</a>
+
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Dashboard</a>
+                    <a class="nav-link" href="#">Dashboard</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Profile</a>
+                    <a class="nav-link" href="#">Profile</a>
                 </li>
-               
-              </ul>
-            </div>
-          </nav>
-   
 
-          <section class="container" id="projectGrid">
-           
-            <div id="1"></div>
-            <div id="2"></div>
-            <div id="3"></div>
-            <div id="4"></div>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="container-fluid px-4">
+    <div class="row gx-3 " id="projectHome">
+        <div class="col-sm-12 col-md-3" id="outline">
+            <h2>Outline</h2>
 
 
-          </section>
-          <script src="../public/js/dashboard.js"></script>
+        </div>
+        <div class="col-sm-12 col-md" id="paper">
+            <h2 id="title" style="margin-top: 0%;">Paper</h2>
+            
+
+
+        </div>
+        <div class="col-sm-12 col-md-3" id="additional">
+            <h2>Additional</h2> 
+
+
+        </div>
+    </div>
+</section>
+
+
+
+    <script src="../public/js/dashboard.js"></script>
 
 
 
@@ -64,6 +78,6 @@
       <script src="/js/logout.js"></script>
     {{/if}} -->
 
-  </body>
+</body>
 
 </html>
