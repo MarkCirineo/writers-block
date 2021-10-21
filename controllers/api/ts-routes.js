@@ -3,7 +3,7 @@
 const router = require("express").Router();
 const { User, Project, Topic_Sentence, Works_Cited } = require("../../models");
 
-// TODO: GET all Topic Sentences
+// GET all Topic Sentences
 router.get("/", async (req, res) => {
   try {
     const tsData = await Topic_Sentence.findAll();
@@ -13,7 +13,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-// TODO: GET Topic Sentence by ID
+// GET Topic Sentence by ID
 router.get("/:id", async (req, res) => {
   try {
     const tsData = await Topic_Sentence.findOne({
@@ -40,7 +40,19 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-// TODO: CREATE a new Topic Sentence
+// CREATE a new Topic Sentence
+router.post("/", async (req, res) => {
+  try {
+    const tsData = await Project.create({
+      sentence: req.body.sentence,
+    });
+    res.status(200).json(tsData, {
+      message: "Your Topic Sentence has been added to the project!",
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 // TODO: UPDATE a Topic Sentence
 
