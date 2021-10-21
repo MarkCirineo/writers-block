@@ -24,7 +24,7 @@ Here is a link to the Heroku deployment: [Writers's Block Heroku Link]()
 
 Open app by navigating to the Heroku link listed above.
 
-The default page is the oser being directed to login to their account. If no account exists, user can create one. Once logged in, user can create a project, add a thesis statement and topic sentences, check out the recommended sources provided by the API, and begin creating their Works Cited page. Created items can be edited or deleted should the user desire. Once saved, new projects can be created and stored.
+The default page is the user being directed to login to their account. If no account exists, user can create one. Once logged in, user can create a project, add a thesis statement and topic sentences, check out the recommended sources provided by the API, and begin creating their Works Cited page. Created items can be edited or deleted should the user desire. Once saved, new projects can be created and stored.
 
 ## License
 
