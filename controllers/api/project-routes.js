@@ -4,7 +4,7 @@ const router = require("express").Router();
 const { route } = require(".");
 const { User, Project, Topic_Sentence, Works_Cited } = require("../../models");
 
-//TODO: GET a list of all projects
+// GET a list of all projects
 router.get("/", async (req, res) => {
   try {
     const projectData = await Project.findAll();
@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-//TODO: GET a project by ID
+// GET a project by ID
 router.get("/:id", async (req, res) => {
   try {
     const projectData = await Project.findOne({
@@ -41,7 +41,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-//TODO: CREATE a new project
+// CREATE a new project
 router.post("/", async (req, res) => {
   try {
     const projectData = await Project.create({
@@ -56,7 +56,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-//TODO: UPDATE a project
+// UPDATE a project
 router.put("/:id", async (req, res) => {
   try {
     const projectData = await Project.update(req.body);
@@ -69,7 +69,7 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-//TODO: DELETE a project
+// DELETE a project
 router.delete("/:id", async (req, res) => {
   try {
     const projectData = await Project.destroy({
