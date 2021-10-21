@@ -2,13 +2,19 @@
 
 
 
-<section class="container" id="projectGrid">
-<div class="col-sm-12 col-md-3" id="newProject">New Project</div>
+<section class="container-fluid" id="projectGrid">
+    <h1>Projects</h1>
+    <article class="row ">
+<div class="project col-sm-12 col-md-2" id="newProject"><h3>New Project</h3></div>
 
-{{#each project as |project|}}
+{{#each projects as |project|}}
 
-<div class="col-sm-12 col-md-3" id={{project.id}}>
-    {{project.name}}
+<div class="project col-sm-12 col-md-2" id={{project.id}}>
+    <h3>{{project.title}}</h3>
 </div>
-
+{{/each}}
+</article>
 </section>
+
+
+<script src="/js/dashboard.js"></script>
