@@ -8,7 +8,7 @@ const router = require("express").Router();
 //   res.render("homepage")
 // })
 
-
+// TODO: Figure out how to pull out user ID to match with projects from Database
 router.get('/', withAuth, async (req, res) => {
     try {
       // Get all projects and JOIN with user data

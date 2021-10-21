@@ -68,6 +68,21 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-// TODO: DELETE a Topic Sentence
+//  DELETE a Topic Sentence
+router.delete("/:id", async (req, res) => {
+  try {
+    const tsData = await Topic_Sentence.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    if (!tsData) {
+      res.status(404).json({ message: "No Topic Sentence with this ID" });
+    }
+    res.status(200).json({ message: "This Topic Sentence has been deleted!" });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 module.exports = router;
