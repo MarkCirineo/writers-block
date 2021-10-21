@@ -1,6 +1,7 @@
 // Individual pages are for getting the specific data from the database
 // Full CRUD operations
 const router = require("express").Router();
+const { route } = require(".");
 const { User, Project, Topic_Sentence, Works_Cited } = require("../../models");
 
 // GET all Topic Sentences
@@ -43,7 +44,7 @@ router.get("/:id", async (req, res) => {
 // CREATE a new Topic Sentence
 router.post("/", async (req, res) => {
   try {
-    const tsData = await Project.create({
+    const tsData = await Topic_Sentence.create({
       sentence: req.body.sentence,
     });
     res.status(200).json(tsData, {
@@ -54,7 +55,18 @@ router.post("/", async (req, res) => {
   }
 });
 
-// TODO: UPDATE a Topic Sentence
+// UPDATE a Topic Sentence
+router.put("/:id", async (req, res) => {
+  try {
+    const tsData = await Topic_Sentence.update(req.body);
+    if (!tsData) {
+      res.status(404).json({ message: "No Topic Sentence with this ID" });
+    }
+    res.status(200).json({ message: "This Topic Sentence has been updated!" });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 // TODO: DELETE a Topic Sentence
 
