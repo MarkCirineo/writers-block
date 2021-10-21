@@ -1,4 +1,4 @@
-const { Project } = require("../models");
+const { Project, User } = require("../models");
 const withAuth = require('../utils/auth');
 
 // Think of this as views - handling rendering Handlebars
@@ -12,11 +12,17 @@ const router = require("express").Router();
 router.get('/', withAuth, async (req, res) => {
     try {
       // Get all projects and JOIN with user data
-      const projectData = await Project.findAll();
+      const UserData = await User.findByPk(req.session.user_id, {
+        include:[{
+          model: Project,
+        }]
+      });
   
       // Serialize data so the template can read it
-      const projects = projectData.map((project) => project.get({ plain: true }));
-  
+      
+      let projects = UserData.get({plain: true});
+      projects = projects.projects
+
       // Pass serialized data and session flag into template
       res.render('dashboard', { 
         projects
