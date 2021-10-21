@@ -2,3 +2,31 @@
     margin:0;
     box-sizing: border-box;
 }
+
+
+section{
+    margin: 0%;
+}
+
+#projectHome{
+    margin-top:40px ;
+    text-align: center;
+
+}
+
+#outline, #additional{
+    border-style: solid;
+    border-radius: 5px;
+
+}
+
+#paper{
+    margin-left: 10px;
+    margin-right:10px;
+}
+
+#paper *{
+    border-style: solid;
+    border-radius: 5px;
+    margin: 10px;
+}

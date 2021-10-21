@@ -3,9 +3,11 @@
 
 
 <section class="container" id="projectGrid">
+<div class="col-sm-12 col-md-3" id="newProject">New Project</div>
+
 {{#each project as |project|}}
 
-<div class="col-sm" id={{project.id}}>
+<div class="col-sm-12 col-md-3" id={{project.id}}>
     {{project.name}}
 </div>
 
