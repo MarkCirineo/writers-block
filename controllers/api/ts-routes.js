@@ -1,7 +1,6 @@
 // Individual pages are for getting the specific data from the database
 // Full CRUD operations
 const router = require("express").Router();
-const { route } = require(".");
 const { User, Project, Topic_Sentence, Works_Cited } = require("../../models");
 
 // GET all Topic Sentences
