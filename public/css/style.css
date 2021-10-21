@@ -2,3 +2,63 @@
     margin:0;
     box-sizing: border-box;
 }
+
+
+section{
+    margin: 0%;
+}
+
+#projectHome{
+    margin-top:40px ;
+    text-align: center;
+
+}
+
+#outline, #additional{
+    border-style: solid;
+    border-radius: 5px;
+
+}
+
+#paper{
+    margin-left: 10px;
+    margin-right:10px;
+}
+
+#paper *{
+    border-style: solid;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+#projectGrid div{
+    margin: 1%;
+    border: grey solid;
+    border-radius: 3px;
+    max-width: 14.666%;
+    background-image: url("../images/notebook.jpg");
+    background-size: contain;
+
+    
+}
+
+.project{
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+#projectGrid h1{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.project h3{
+    margin:auto;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #21252936 ;
+    max-width: 90%;
+    
+}
