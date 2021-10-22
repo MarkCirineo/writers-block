@@ -58,7 +58,11 @@ router.post("/", async (req, res) => {
 // UPDATE a Works Cited
 router.put("/:id", async (req, res) => {
   try {
-    const wcData = await Works_Cited.update(req.body);
+    const wcData = await Works_Cited.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    });
     if (!wcData) {
       res.status(404).json({ message: "No Work Cited with this ID" });
     }
