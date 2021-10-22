@@ -45,8 +45,9 @@ router.post("/", async (req, res) => {
   try {
     const tsData = await Topic_Sentence.create({
       sentence: req.body.sentence,
+      project_id: req.body.project_id,
     });
-    res.status(200).json(tsData, {
+    res.status(200).json({
       message: "Your Topic Sentence has been added to the project!",
     });
   } catch (err) {
@@ -57,7 +58,11 @@ router.post("/", async (req, res) => {
 // UPDATE a Topic Sentence
 router.put("/:id", async (req, res) => {
   try {
-    const tsData = await Topic_Sentence.update(req.body);
+    const tsData = await Topic_Sentence.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    });
     if (!tsData) {
       res.status(404).json({ message: "No Topic Sentence with this ID" });
     }

@@ -45,8 +45,9 @@ router.post("/", async (req, res) => {
   try {
     const wcData = await Works_Cited.create({
       content: req.body.content,
+      project_id: req.body.project_id,
     });
-    res.status(200).json(wcData, {
+    res.status(200).json({
       message: "Your Work Cited has been added to the project!",
     });
   } catch (err) {
@@ -57,7 +58,11 @@ router.post("/", async (req, res) => {
 // UPDATE a Works Cited
 router.put("/:id", async (req, res) => {
   try {
-    const wcData = await Works_Cited.update(req.body);
+    const wcData = await Works_Cited.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    });
     if (!wcData) {
       res.status(404).json({ message: "No Work Cited with this ID" });
     }

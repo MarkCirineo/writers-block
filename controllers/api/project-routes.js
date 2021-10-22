@@ -49,7 +49,7 @@ router.post("/", async (req, res) => {
       thesis: req.body.thesis,
       user_id: req.session.user_id,
     });
-    res.status(200).json(projectData, {
+    res.status(200).json({
       message: "Your project has been added to the database!",
     });
   } catch (err) {
@@ -60,7 +60,11 @@ router.post("/", async (req, res) => {
 // UPDATE a project
 router.put("/:id", async (req, res) => {
   try {
-    const projectData = await Project.update(req.body);
+    const projectData = await Project.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    });
     if (!projectData) {
       res.status(404).json({ message: "No project with this ID" });
     }
