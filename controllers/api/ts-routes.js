@@ -58,7 +58,11 @@ router.post("/", async (req, res) => {
 // UPDATE a Topic Sentence
 router.put("/:id", async (req, res) => {
   try {
-    const tsData = await Topic_Sentence.update(req.body);
+    const tsData = await Topic_Sentence.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    });
     if (!tsData) {
       res.status(404).json({ message: "No Topic Sentence with this ID" });
     }

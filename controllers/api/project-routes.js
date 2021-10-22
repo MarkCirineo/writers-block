@@ -60,7 +60,11 @@ router.post("/", async (req, res) => {
 // UPDATE a project
 router.put("/:id", async (req, res) => {
   try {
-    const projectData = await Project.update(req.body);
+    const projectData = await Project.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    });
     if (!projectData) {
       res.status(404).json({ message: "No project with this ID" });
     }
