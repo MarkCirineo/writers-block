@@ -1,7 +1,7 @@
 // Individual pages are for getting the specific data from the database
 // Full CRUD operations
 const router = require("express").Router();
-const { User, Project } = require("../../models");
+const { User, Project, Topic_Sentence, Works_Cited } = require("../../models");
 
 // BASIC CRUD
 // GET all users, GET one user, CREATE user, UPDATE user, DELETE user
@@ -33,6 +33,16 @@ router.get("/:id", async (req, res) => {
         {
           model: Project,
           attributes: ["title", "thesis", "user_id"],
+          include: [
+            {
+              model: Topic_Sentence,
+              attributes: ["sentence", "project_id"],
+            },
+            {
+              model: Works_Cited,
+              attributes: ["content", "project_id"],
+            },
+          ],
         },
       ],
     });
