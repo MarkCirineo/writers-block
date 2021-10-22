@@ -49,7 +49,7 @@ router.post("/", async (req, res) => {
       thesis: req.body.thesis,
       user_id: req.session.user_id,
     });
-    res.status(200).json(projectData, {
+    res.status(200).json({
       message: "Your project has been added to the database!",
     });
   } catch (err) {
