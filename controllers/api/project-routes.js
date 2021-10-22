@@ -47,8 +47,9 @@ router.post("/", async (req, res) => {
     const projectData = await Project.create({
       title: req.body.title,
       thesis: req.body.thesis,
+      user_id: req.body.user_id,
     });
-    res.status(200).json(projectData, {
+    res.status(200).json({
       message: "Your project has been added to the database!",
     });
   } catch (err) {

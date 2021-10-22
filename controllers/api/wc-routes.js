@@ -45,8 +45,9 @@ router.post("/", async (req, res) => {
   try {
     const wcData = await Works_Cited.create({
       content: req.body.content,
+      project_id: req.body.project_id,
     });
-    res.status(200).json(wcData, {
+    res.status(200).json({
       message: "Your Work Cited has been added to the project!",
     });
   } catch (err) {
