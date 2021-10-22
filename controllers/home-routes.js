@@ -56,7 +56,9 @@ router.get('/', withAuth, async (req, res) => {
     if (!projectData) {
       res.status(404).json({ message: "No project with this ID" });
     }
+      console.log(projectData)
     res.render("project", {projectData});
+  
   } 
 
   )
