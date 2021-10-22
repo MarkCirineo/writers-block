@@ -4,15 +4,11 @@ const withAuth = require('../utils/auth');
 // Think of this as views - handling rendering Handlebars
 const router = require("express").Router();
 
-// router.get("/",withAuth, (req,res)=>{
-//   res.render("homepage")
-// })
-
 // TODO: Figure out how to pull out user ID to match with projects from Database
 router.get('/', withAuth, async (req, res) => {
     try {
       // Get all projects and JOIN with user data
-      const UserData = await User.findByPk(req.session.user_id, {
+      const userData = await User.findByPk(req.session.user_id, {
         include:[{
           model: Project,
         }]
@@ -20,12 +16,12 @@ router.get('/', withAuth, async (req, res) => {
   
       // Serialize data so the template can read it
       
-      let projects = UserData.get({plain: true});
-      projects = projects.projects
-
+      let users = userData.get({plain: true});
+      let projects = users.projects
       // Pass serialized data and session flag into template
       res.render('dashboard', { 
-        projects
+        projects,
+        logged_in: req.session.logged_in
       });
     } catch (err) {
       res.status(500).json(err);
