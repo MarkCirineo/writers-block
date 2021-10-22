@@ -1,4 +1,4 @@
-const { Project, User } = require("../models");
+const { Project, User, Topic_Sentence, Works_Cited } = require("../models");
 const withAuth = require('../utils/auth');
 
 // Think of this as views - handling rendering Handlebars
@@ -34,6 +34,32 @@ router.get('/', withAuth, async (req, res) => {
       res.render("project")
 
   })
+
+
+  router.get("/project/:id", async(req,res)=>{
+    const projectData = await Project.findOne({
+      where: {
+        id: req.params.id,
+      },
+      include: [
+        {
+          model: Topic_Sentence,
+          attributes: ["sentence", "project_id"],
+        },
+        {
+          model: Works_Cited,
+          attributes: ["content", "project_id"],
+        },
+      ],
+    });
+
+    if (!projectData) {
+      res.status(404).json({ message: "No project with this ID" });
+    }
+    res.render("project", {projectData});
+  } 
+
+  )
   
   router.get('/login', (req, res) => {
     // If the user is already logged in, redirect the request to another route
