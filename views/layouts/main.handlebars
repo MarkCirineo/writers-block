@@ -17,7 +17,7 @@
 <body>
   <nav class="navbar navbar-expand-md bg-dark navbar-dark mx-0">
     <!-- Brand -->
-    <a class="navbar-brand" href="#">Writer's Block</a>
+    <a class="navbar-brand" href="/">Writer's Block</a>
 
     <!-- Toggler/collapsibe Button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -27,26 +27,27 @@
     <!-- Navbar links -->
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav">
+        {{#if logged_in}}
         <li class="nav-item">
-          <a class="nav-link" href="#">Dashboard</a>
+          <a class="nav-link" href="/">Dashboard</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Profile</a>
-        </li>
-        < class="nav-item">
-
           <button class="no-button" id="logout">logout</button> 
         </li>
-
+        {{else}}
+        <li class="nav-item">
+          <a class="nav-link" href="/">Dashboard</a>
+        </li>
+        {{/if}}
       </ul>
     </div>
   </nav>
 
   {{{body}}}
 
-
+  {{#if logged_in}}
   <script src="/js/logout.js"></script>
-
+  {{/if}}
 
 </body>
 
