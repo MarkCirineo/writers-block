@@ -23,7 +23,14 @@
                 {{#each works as |work|}}
 
                 <h2 class="wc">Works Cited</h2>
+                <input class="works" type="text" value="{{work.author_first}}"id="{{work.id}}">
+                <input class="works" type="text" value="{{work.author_last}}"id="{{work.id}}">
                 <input class="works" type="text" value="{{work.title}}"id="{{work.id}}">
+                <input class="works" type="text" value="{{work.ver_ed}}"id="{{work.id}}">
+                <input class="works" type="text" value="{{work.publisher}}"id="{{work.id}}">
+                <input class="works" type="text" value="{{work.publication_date}}"id="{{work.id}}">
+                <input class="works" type="text" value="{{work.location}}"id="{{work.id}}">
+                
 
                 {{/each}}
 
