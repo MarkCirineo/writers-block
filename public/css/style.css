@@ -24,9 +24,11 @@ section{
     
 
 
-#paper *{
+#paper *, #additional *{
     border-style: solid;
     border-radius: 5px;
+    width: 100%;
+   
     
 }
 
@@ -60,4 +62,8 @@ section{
     background-color: #21252936 ;
     max-width: 90%;
     
+}
+
+#additional a{
+    text-decoration: none;
 }

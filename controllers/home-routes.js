@@ -44,11 +44,11 @@ router.get('/', withAuth, async (req, res) => {
       include: [
         {
           model: Topic_Sentence,
-          attributes: ["sentence", "project_id"],
+          attributes: ["id","sentence", "project_id"],
         },
         {
           model: Works_Cited,
-          attributes: ["content", "project_id"],
+          attributes: ["id","content", "project_id"],
         },
       ],
     });
@@ -56,7 +56,12 @@ router.get('/', withAuth, async (req, res) => {
     if (!projectData) {
       res.status(404).json({ message: "No project with this ID" });
     }
-    res.render("project", {projectData});
+    const topic = projectData.dataValues.topic_sentences;
+    const topics = topic.map((topic) => topic.get({ plain: true }));
+    const work = projectData.dataValues.works_citeds;
+    const works = work.map((work) => work.get({ plain: true }));
+    res.render("project", {projectData, topics, works});
+  
   } 
 
   )
