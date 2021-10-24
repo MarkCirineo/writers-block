@@ -1,74 +1,98 @@
 [
     {
-        "content": "This is an exampled works cited for the first project.",
+        "author_first": "Kevin",
+        "author_last": "Johnson",
+        "title": "Kevin's Book",
+        "ver_ed": "",
+        "publisher": "Bantam Books Publishing",
+        "publication_date": "2015",
+        "location": "Pages 150-158",
         "project_id": 1
     },
     {
-        "content": "This is an exampled works cited for the first project.",
+        "author_first": "Barty",
+        "author_last": "Scraven",
+        "title": "The History of Books",
+        "ver_ed": "3rd Edition",
+        "publisher": "Red House Publishing",
+        "publication_date": "2019",
+        "location": "Page 170",
         "project_id": 1
     },
     {
-        "content": "This is an exampled works cited for the second project.",
+        "author_first": "Marcia",
+        "author_last": "Stephens",
+        "title": "American News Weekly",
+        "ver_ed": "vol. 30, no. 3",
+        "publisher": "News Weekly Publishing",
+        "publication_date": "2021",
+        "location": "Page 170",
         "project_id": 2
     },
     {
-        "content": "This is an exampled works cited for the second project.",
+        "author_first": "Lindsay",
+        "author_last": "Welch",
+        "title": "American Humane Society",
+        "ver_ed": "",
+        "publisher": "American Humane Society",
+        "publication_date": "2018",
+        "location": "www.ahs.com/dogs/cool/hxwon4y8922",
         "project_id": 2
     },
     {
-        "content": "This is an exampled works cited for the third project.",
+        "title": "This is an example works cited for the third project.",
         "project_id": 3
     },
     {
-        "content": "This is an exampled works cited for the third project.",
+        "title": "This is an example works cited for the third project.",
         "project_id": 3
     },
     {
-        "content": "This is an exampled works cited for the fourth project.",
+        "title": "This is an example works cited for the fourth project.",
         "project_id": 4
     },
     {
-        "content": "This is an exampled works cited for the fourth project.",
+        "title": "This is an example works cited for the fourth project.",
         "project_id": 4
     },
     {
-        "content": "This is an exampled works cited for the fifth project.",
+        "title": "This is an example works cited for the fifth project.",
         "project_id": 5
     },
     {
-        "content": "This is an exampled works cited for the fifth project.",
+        "title": "This is an example works cited for the fifth project.",
         "project_id": 5
     },
     {
-        "content": "This is an exampled works cited for the sixth project.",
+        "title": "This is an example works cited for the sixth project.",
         "project_id": 6
     },
     {
-        "content": "This is an exampled works cited for the sixth project.",
+        "title": "This is an example works cited for the sixth project.",
         "project_id": 6
     },
     {
-        "content": "This is an exampled works cited for the seventh project.",
+        "title": "This is an example works cited for the seventh project.",
         "project_id": 7
     },
     {
-        "content": "This is an exampled works cited for the seventh project.",
+        "title": "This is an example works cited for the seventh project.",
         "project_id": 7
     },
     {
-        "content": "This is an exampled works cited for the eighth project.",
+        "title": "This is an example works cited for the eighth project.",
         "project_id": 8
     },
     {
-        "content": "This is an exampled works cited for the eighth project.",
+        "title": "This is an example works cited for the eighth project.",
         "project_id": 8
     },
     {
-        "content": "This is an exampled works cited for the ninth project.",
+        "title": "This is an example works cited for the ninth project.",
         "project_id": 9
     },
     {
-        "content": "This is an exampled works cited for the ninth project.",
+        "title": "This is an example works cited for the ninth project.",
         "project_id": 9
     }
 ]
