@@ -8,19 +8,20 @@
         <div class="col-sm-12 col-md-6" id="paper" >
             
             <h2 id="title" style="margin-top: 0%; text-align:center">Title<input type="text" id="paperTitle"value="{{projectData.dataValues.title}}" ></h2>
-            <h2 id="thesis">Thesis</h2>
+            <h3 id="thesis">Thesis</h3>
                 <input type="text" id="paperThesis"value="{{projectData.dataValues.thesis}}" >
             
             <div id="topicSentences">
                 {{#each topics as |ts|}}
                     
-                <h2 class="ts">Topic Sentence</h2>
+                <h3 class="ts">Topic Sentence</h3>
                     <input class="topic"type="text" value="{{ts.sentence}}"id={{ts.id}} >
                  {{/each}}
             </div>
 
             <div id="worksCited">
                 {{#each works as |work|}}
+
 
                 <h2 class="wc">Works Cited</h2>
                 <input class="works" type="text" value="{{work.author_first}}"id="{{work.id}}">
@@ -38,7 +39,7 @@
 
         </div>
         <div class="col-sm-12 col-md-3" id="additional">
-            <h2>Additional</h2> 
+            <h2>Related Content</h2> 
 
 
         </div>
