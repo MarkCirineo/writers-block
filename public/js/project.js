@@ -48,8 +48,13 @@ $(".works").change(async function(){
     })
 
 const additional = async()=>{
+
+    title = $("#paperTitle").val();
+
+
+
 var apiKey = "7da89343571edc0396b3a74f2ee6f0b5"
-var keyword = "pug"
+var keyword = "coke+AND+pepsia"
 await fetch(`https://api.dp.la/v2/items?q=${keyword}&api_key=${apiKey}`,{
     method:"GET"
     
@@ -57,16 +62,18 @@ await fetch(`https://api.dp.la/v2/items?q=${keyword}&api_key=${apiKey}`,{
 .then(res => res.json())
   .then(function(data){
       var resorces = [];
-    for(let i = 0; i<10;){
+      console.log(data)
+    for(let i = 0; i<6;){
     let article = data.docs[i];
 
         info = {
             "desc": article.sourceResource.description,
-            "source":article.isShownAt
+            "source":article.isShownAt,
+            "title": article.sourceResource.title[0]
         }
 
-            if(typeof info.desc !== "undefined" && resorces.length<5){
-                console.log(typeof info.desc);
+            if(typeof info.desc !== "undefined" && resorces.length<3){
+                console.log(info)
                 resorces.push(info);
                     
         }
@@ -79,12 +86,15 @@ await fetch(`https://api.dp.la/v2/items?q=${keyword}&api_key=${apiKey}`,{
     }
     console.log(resorces)
     for(item in resorces){
-        let title = resorces[item].desc
+        let desc = resorces[item].desc
         let link = resorces[item].source
+        let title = resorces[item].title
+        
         console.log(title[0])
         $("#additional").append(`
-        <div id="add${item}">
-        <h4>${title[0]}</h4>
+        <div class="resource" id="add${item}">
+        <h5>Title: ${title}</h5>
+        <h6>Description: ${desc[0]} </h6>
         <a href="${link}"target="blank">Visit here</a>
         `)
     }
