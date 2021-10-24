@@ -10,7 +10,7 @@ Here is a screenshot of the app:
 
 ![Writer's Block Screenshot]()
 
-Here is a link to the Heroku deployment: [Writers's Block Heroku Link]()
+Here is a link to the Heroku deployment: [Writers's Block Heroku Link](https://hidden-gorge-91914.herokuapp.com/)
 
 ## Table of Contents
 
