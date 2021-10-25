@@ -46,7 +46,7 @@ router.get("/project/:id", async (req, res) => {
       },
       {
         model: Works_Cited,
-        attributes: ["id", "title", "project_id"],
+        attributes: ["id",  "project_id"],
       },
     ],
   });

@@ -2,6 +2,7 @@
 
 $(function(){
     additional();
+    $("#worksCited").hide();
 })
 
 
@@ -12,7 +13,7 @@ $("#paperTitle").change(async function(){
         method: 'PUT', 
         body: JSON.stringify({title} ),
         headers: { 'Content-Type': 'application/json' },
-      });
+      }).then(function(){additional()})
   
 })
 
@@ -48,13 +49,17 @@ $(".works").change(async function(){
     })
 
 const additional = async()=>{
+    $("#additional").empty();
 
     title = $("#paperTitle").val();
+    console.log(title)
+    var words = title.split(" ")
+    console.log(words)
+    var keyword = `${words[0]}+AND+${words[1]}`
 
 
 
 var apiKey = "7da89343571edc0396b3a74f2ee6f0b5"
-var keyword = "coke+AND+pepsia"
 await fetch(`https://api.dp.la/v2/items?q=${keyword}&api_key=${apiKey}`,{
     method:"GET"
     

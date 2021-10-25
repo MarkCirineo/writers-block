@@ -30,10 +30,10 @@ $(function(){
 
     var h3Margin = gridheight/4;
 
-    $(".project > h3").css("margin-top", h3Margin)
+    $(".project > h4").css("margin-top", h3Margin)
 
 
-    console.log($(".project > h3").length)
+    console.log($(".project > h4").length)
 
 
 
