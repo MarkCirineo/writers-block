@@ -8,7 +8,7 @@ This application is a one-stop location for students to organize, outline, and r
 
 Here is a screenshot of the app:
 
-![Writer's Block Screenshot]()
+![Writer's Block Screenshot](assets\writersblockscreenshot.PNG)
 
 Here is a link to the Heroku deployment: [Writers's Block Heroku Link](https://hidden-gorge-91914.herokuapp.com/)
 
